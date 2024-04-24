@@ -4,6 +4,7 @@ class ApiResponse<A>{
   Status? status;
   A? data;
   String? message;
+  ApiResponse(this.data,this.message,this.status);
 
   ApiResponse.loading() : status =Status.LOADING;
 
@@ -13,7 +14,7 @@ class ApiResponse<A>{
 
   @override
   String toString(){
-    return "";
+    return "Status : $status \n Message : $message \n Data : $data";
   }
 
 }
