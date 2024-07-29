@@ -10,6 +10,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,6 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             ElevatedButton(
               onPressed: () {
+                Navigator.pushNamed(context, RoutesName.home,arguments: "Successful");
                 Utils.toastMessage("No Internet Coneection");
               },
               child: Text("Click me"),
